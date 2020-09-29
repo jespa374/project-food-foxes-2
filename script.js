@@ -52,24 +52,105 @@ const getValue = (radio) => {
   fetchZomato(radio.value)
 }
 
+//function sort price
 
-// checkBox.addEventListener('click', () => {
+
+
+
+const sortbyLowPrice = () => {
+  const cityID = 91 //Dublin
+  const cusineID = 82 //pizza
+  const API_URL_LOW_PRICE = `https://developers.zomato.com/api/v2.1/search?entity_id=${cityID}&entity_type=city&cuisines=${cusineID}&sort=cost&order=asc`;
+  const apiKey = "66748116ada83a96ea0d8e2b3c763360" //Peggy
   
+
+
+  fetch(API_URL_LOW_PRICE, { headers: { "user-key": apiKey } })
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText)
+      }
+      return response.json()
+    })
+    .then((json) => {
+      
+      console.log(json)
+      json.restaurants.forEach(place => {
+          
+        console.log(place.restaurant.name);
+        console.log(place.restaurant.average_cost_for_two);
+        console.log(place.restaurant.price_range);
+
+        /*cardContainer.innerHTML += `
+        <article class="card" id="card"> 
+        
+          <img class="pic" src="${place.restaurant.thumb}"/>
+          <h4>${place.restaurant.name}</h4>
+          <p>Average cost for 2: ${place.restaurant.average_cost_for_two}</p>
+          <p>Neightborhood: ${place.restaurant.location.locality}</p>
+          <p>Online Delivery: ${place.restaurant.has_online_delivery}</p>
+          <p>Table Booking: ${place.restaurant.has_table_booking}</p>
+          <p>Aggregate Rating: ${place.restaurant.user_rating.aggregate_rating}</p>
+          <p>Price Range: ${place.restaurant.price_range}</p>
+         
+          <p>Address: ${place.restaurant.location.address}</p>
+        
+        </article>`*/
+      })
+    })
+  }
+  const sortButton = document.getElementById('sort-button');
+  roomCard.addEventListener('click', sortbyLowPrice);
+  sortbyLowPrice();
+
+  const sortbyHighPrice = () => {
+    const apiKey = "66748116ada83a96ea0d8e2b3c763360" //Peggy
+    const cityID = 91 //Dublin
+    const cusineID = 82 //pizza
+    const API_URL_HIGH_PRICE = `https://developers.zomato.com/api/v2.1/search?entity_id=${cityID}&entity_type=city&cuisines=${cusineID}&sort=cost&order=desc`;
+
   
-//   console.log(checkedValue)
-// })
+    fetch(API_URL_HIGH_PRICE, { headers: { "user-key": apiKey } })
+      .then((response) => {
+        if (!response.ok) {
+          throw Error(response.statusText)
+        }
+        return response.json()
+      })
+      .then((json) => {
+        
+        console.log(json)
+        json.restaurants.forEach(place => {
+            
+          console.log(place.restaurant.name);
+          console.log(place.restaurant.average_cost_for_two);
+          console.log(place.restaurant.price_range);
+  
+          /*cardContainer.innerHTML += `
+          <article class="card" id="card"> 
+          
+            <img class="pic" src="${place.restaurant.thumb}"/>
+            <h4>${place.restaurant.name}</h4>
+            <p>Average cost for 2: ${place.restaurant.average_cost_for_two}</p>
+            <p>Neightborhood: ${place.restaurant.location.locality}</p>
+            <p>Online Delivery: ${place.restaurant.has_online_delivery}</p>
+            <p>Table Booking: ${place.restaurant.has_table_booking}</p>
+            <p>Aggregate Rating: ${place.restaurant.user_rating.aggregate_rating}</p>
+            <p>Price Range: ${place.restaurant.price_range}</p>
+           
+            <p>Address: ${place.restaurant.location.address}</p>
+          
+          </article>`*/
+        })
+      })
+    }
+    sortbyHighPrice();
+    roomCard.addEventListener('click', sortbyLowPrice);
 
-/*
-const getValue = (radio) => {
-  weatherToday(radio.value);
-  forcastWeather(radio.value);
-};
+//sort on price code suggestion
 
-const filteredArr = newWeatherForcastArr.filter((item) =>
-        item["dt_txt"].includes("12:00:00")
-      );
 
-*/      
+    
 /* Build a Food Review website
 Pizza restaurants in Dublin
 in the style of Deliveroo
