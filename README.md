@@ -46,27 +46,21 @@ Below are suggestions for features for your site. You're free to choose the ones
 You don't need to implement all sections (if there's any that is not relevant to your site) but try and copy the page look and feel and design details. Feel free to make text, logo and other things your own – it's a tribute, not an exact copy.
 
 **💰Filter on price range** 
-
 Add so that your users can filter restaurants based on different price ranges. 
 
 **🚀Sort on price** 
-
 Add so that your users can sort the resturants on price, cheap to expensive using the `average_cost_for_two` parameter. 
 
 **💬List reviews** 
-
 List the 3 latest reviews for each restaurant. 
 
 **💬Filter on delivery options** 
-
 Make it so your users can choose to only show resturants which have delivery (`has_online_delivery`) or can be booked in advance (`has_table_booking`). 
 
 **🖼Filter on reviews**
-
 Make it so your users can choose to only show restaurants with good ratings.
 
 **📱Make the page responsive**
-
 To work on mobile, desktop or tablet. 
 
 Feel free to challenge yourself and team to come up with more or other features! This is your group project – you decided. 
