@@ -1,8 +1,5 @@
 const cardContainer = document.getElementById('card-container')
 const card = document.getElementById('card')
-const restoInfo = document.getElementById('api-data')
-
-
 
 
 const fetchZomato = () => {
@@ -22,8 +19,6 @@ const fetchZomato = () => {
       
       console.log(json)
       json.restaurants.forEach(place => {
-          
-        console.log(place.restaurant.price_range);
 
         cardContainer.innerHTML += `
         <article class="card" id="card"> 
@@ -38,7 +33,7 @@ const fetchZomato = () => {
           <p>Price Range: ${place.restaurant.price_range}</p>
          
           <p>Address: ${place.restaurant.location.address}</p>
-        
+          <p>Reviews: ${place.restaurant.user_rating.rating_text}
         </article>`
       })
     })
@@ -51,8 +46,6 @@ fetchZomato()
 // const getValue = (radio) => {
 //   fetchZomato(radio.value)
 // }
-
-
 
 
 
