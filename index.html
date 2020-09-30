@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Pizza in Dublin</title>
-  </head>
-  <body>
-    <section class="filters" id="filters">
-      <p>Filter</p>
 
-     <div class="price-sort"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Dublin Pizza Finder</title>
+</head>
+<body>
+
+  <!-- Nav bar -->
+  <header>
+      <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <h2>Dublin Pizza Finder</h2>
+      <img src="/assets/ico.png" alt="Dublin Pizza Finder logo">
+      
+      <nav>
+        <a href="#">Sign Up</a>
+        <a href="#">Login</a>
+      </nav>
+  </header>
+
+  <!-- Filter sidebar & restaurant cards -->
+  <section class="body-container">
+    
+    <section class="filters" id="filters">
+      <h3>Filters</h3>
+
+      <div class="price-sort"> 
             <p>Price (low to high; high to low):</p>
         <label for="priceOne">
           Low
@@ -31,58 +52,52 @@
             onchange="sortByHighPrice(this)" 
             /> 
        </div> 
-       </section>
-      
-      <div class="filter-price-range">
+        
+      <div class="price-range">
         <p>Price Range (1-cheap; 5-expensive):</p>
 
         <label for="priceOne">
-          1
           <input
             type="radio"
             id="priceOne"
             name="price-range"
             value="1"
             onchange="onPriceRangeChange(this)"
-          />
+          />1
         </label>
 
         <label for="priceTwo">
-          2
           <input
             type="radio"
             id="priceTwo"
             name="price-range"
             value="2"
             onchange="onPriceRangeChange(this)"
-          />
+          />2
         </label>
-
+        
         <label for="priceThree">
-          3
           <input
             type="radio"
             id="priceThree"
             name="price-range"
             value="3"
             onchange="onPriceRangeChange(this)"
-          />
+          />3
         </label>
 
         <label for="priceFour">
-          4
           <input
             type="radio"
             id="priceFour"
             name="price-range"
             value="4"
             onchange="onPriceRangeChange(this)"
-          />
-        </label>
-      </div>
-        
+          />4
+        </label>        
+    </div>   
 
-      <div class="good-reviews">
+     <div class="good-reviews">
         <label for="goodReviews">
           Good Reviews Only
           <input
@@ -93,12 +108,24 @@
           />
         </label>
       </div>
-    </section>
-
+        
+        
     <section class="card-container" id="card-container">
       <!-- JavaScript to inject api data for each restaurant -->
     </section>
 
-    <script src="./script.js"></script>
-  </body>
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer">
+      Made by Sandra Shumanteva, Jessica Panditha, and Peggy @
+        <a href="https://blipsandclicks.com">blipsandclicks</a>
+        during Technigo Bootcamp 2020 for educational purposes. Data from 
+        <a href="https://developers.zomato.com/">Zomato</a>. Icons from <a href="https://www.flaticon.com/">Flaticon</a>.
+    </div>
+    <div class="footer"><span>&#129418; | </span><img src="assets/technigo-logo.svg"></div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
 </html>

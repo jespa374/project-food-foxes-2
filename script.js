@@ -56,16 +56,14 @@ const printRestorants = (restaurants) => {
     <article class="card" id="card"> 
       <img class="pic" src="${place.restaurant.thumb}"/>
       <h4>${place.restaurant.name}</h4>
-      <p>Average cost for two: ${place.restaurant.average_cost_for_two} ${place.restaurant.currency}</p>
-      <p>Neightborhood: ${place.restaurant.location.locality}</p>
-      <p>Online Delivery: ${place.restaurant.has_online_delivery}</p>
-      <p>Table Booking: ${place.restaurant.has_table_booking}</p>
-      <p>Aggregate Rating: ${place.restaurant.user_rating.aggregate_rating}</p>
-      <p>Price Range: ${place.restaurant.price_range}</p>
       <p>Address: ${place.restaurant.location.address}</p>
+      <p>Average cost for two: ${place.restaurant.average_cost_for_two} ${place.restaurant.currency}</p>
+      <p>Price Range: ${place.restaurant.price_range}</p>
+      <p>Aggregate Rating: ${place.restaurant.user_rating.aggregate_rating}</p>   
     </article>`;
   });
 };
+
 
 
 //function sort price
@@ -99,7 +97,4 @@ const sortbyLowPrice = () => {
         
         
         
-        
-        
-        
-        
+     
