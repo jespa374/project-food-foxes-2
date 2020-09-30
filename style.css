@@ -1,30 +1,108 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  background: #ccc;
-  
+  color: #4d4d4d;  
 }
 
 body {
   margin: 0;
-  background: #c3d6cc;
+  background: #809966;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* Nav */
+header {
+  height: 50px;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hamburger {
+  height: 25px;
+  width: 30px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 24px;
+}
+
+.hamburger div {
+  margin-left: 16px;
+  height: 4px;
+  width: 30px;
+  background: #000;
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 20px;
+  padding: 8px;
+}
+
+nav {
+  display: none;
+  margin-right: 16px;
+}
+
+nav a {
+  color: #809966;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+a:hover {
+  color: #478547;
+  cursor: pointer;
+}
+
+header img {
+  width: 35px;
+}
+
+/* Pizza Listings and Filters */
+.body-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: nowrap;
-  /* align-items: center; */
 }
 
 .filters {
   width: 200px;
   height: 100%;
-  background: #4d4d4d;
+  font-size: 11px;
+  color: #000;
+  background: #809966;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+h3 {
+  margin-left: 6px;
+}
+
+.filter-by {
+  margin: 6px;
+  padding: 0px;
+}
+
+.price-range {
+  margin-left: 6px;
 }
 
 .card-container {
   width: 500px;
-  background: #339966;
+  background: #fff;
   display: flex;
   /* flex-direction: row; */
   flex-wrap: wrap;
@@ -35,15 +113,74 @@ body {
   width: 200px;
   margin: 8px;
   background: #e6fad1;
-  border: 2px solid #000;
+  border: 1px solid #809966;
   border-radius: 3px;
+  box-shadow: 2px 2px 2px 0 #ccc;
+  
 }
 
 h4 {
   margin: 0;
   padding: 0 5px;
+  color: #000;
 }
 
 p {
+  font-size: 11px;
+  margin: 2px 0;
   padding: 0 5px;
+
+}
+
+/* Footer */
+footer {
+  padding: 26px 26px 10px 26px;
+  background: #fff;
+}
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+}
+footer span {
+  font-size: 20px;
+}
+
+footer img {
+  height: 19px;
+  padding: 0;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {  
+  header img {
+    margin-left: 8px;
+  }
+
+  .card-container {
+    width: 900px;
+  }
+}
+
+/* desktop */
+@media (min-width: 900px) {
+  nav {
+    display: inline-block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .card-container {
+    width: 1280px;
+  }
+
 }
