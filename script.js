@@ -37,66 +37,30 @@ const fetchZomato = () => {
 fetchZomato()
 
 
-
-// function to fetch 3 reviews per restauruant...
-// need to grab restaurant id from original fetch. 
-// console.log(place.restaurant.id)
-
-// then for each restaurant input id into:
-// `https://developers.zomato.com/api/v2.1/reviews?res_id=${restaurantID}&start=4&count=3`
-
-// let restaurantID = 
-// and output:
-// for each of 3 reviews... print out
-// cardContainer.innerHTML += `<p>${}</p>`
-
-
-
-// <p>Reviews: ${place.restaurant.user_rating.rating_text}
-
-//  function to filter by price range
-// const checkBox = document.getElementsByName('price-range')
-// const getValue = (radio) => {
-//   fetchZomato(radio.value)
-// }
-
-
-
 /*
-  
+function to fetch 3 reviews per restauruant...
+need to grab restaurant id from original fetch. 
+console.log(place.restaurant.id)
+
+then for each restaurant input id into:
+`https://developers.zomato.com/api/v2.1/reviews?res_id=${restaurantID}&start=4&count=3`
+
+let restaurantID = 
+and output:
+for each of 3 reviews... print out
+cardContainer.innerHTML += `<p>${}</p>`
+
+
+
+hint from Ragna
 fetch then save response to a let variable 
  then functions are buttons
  which change the Array... or write new arrays based on filters  
 
 
-// removed from Cards
+
+removed from Cards
 <p>Table Booking: ${place.restaurant.has_table_booking}</p>
 <p>Neightborhood: ${place.restaurant.location.locality}</p>
-<p>Online Delivery: ${place.restaurant.has_online_delivery}
-         
-
-*/      
-/* Food Review website
-Pizza restaurants in Dublin
-in the style of Deliveroo
-
-
-List reviews
-List the 3 latest reviews for each restaurant.
-
-Filter on delivery options
-Make it so your users can choose to only show resturants which have delivery (has_online_delivery) or can be booked in advance (has_table_booking).
-
-
-
-
-Make the page responsive
-To work on mobile, desktop or tablet.
-
-
-Filter on reviews
-Sort on price
-Filter on price range 
-
-Feel free to challenge yourself and team to come up with more or other features! This is your group project – you decided.
+<p>Online Delivery: ${place.restaurant.has_online_delivery}       
 */

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <title>Dublin Pizza Finder</title>
-
 </head>
 <body>
+
   <!-- Nav bar -->
   <header>
       <div class="hamburger">
@@ -24,32 +24,32 @@
       </nav>
   </header>
 
-<!-- Filter sidebar & restaurant cards -->
-<section class="body-container">
-  
-  <section class="filters" id="filters">
-    <h3>Filters</h3>
+  <!-- Filter sidebar & restaurant cards -->
+  <section class="body-container">
+    
+    <section class="filters" id="filters">
+      <h3>Filters</h3>
 
-    <div class="price-range" name="price-range" id="price-range" onchange="getValue(this)">
-      <p class="filter-by">Price Range:</p>
-        <label for="priceTwo">
-          <input type="radio" id="price-two" name="price-range" value="2">2
+      <div class="price-range" name="price-range" id="price-range" onchange="getValue(this)">
+        <p class="filter-by">Price Range:</p>
+          <label for="priceTwo">
+            <input type="radio" id="price-two" name="price-range" value="2">2
+          </label>
+        
+        <label for="priceThree">
+          <input type="radio" id="price-three" name="price-range" value="3">3
         </label>
-      
-      <label for="priceThree">
-        <input type="radio" id="price-three" name="price-range" value="3">3
-      </label>
-      
-      <label for="priceFour">
-        <input type="radio" id="price-four" name="price-range" value="4">4
-      </label>
-  </div>   
-  </section>
+        
+        <label for="priceFour">
+          <input type="radio" id="price-four" name="price-range" value="4">4
+        </label>
+    </div>   
+    </section>
 
-  <section class="card-container" id="card-container">
-    <!-- JavaScript to inject api data for each restaurant -->
+    <section class="card-container" id="card-container">
+      <!-- JavaScript to inject api data for each restaurant -->
+    </section>
   </section>
-</section>
 
    <!-- Footer -->
    <footer>
@@ -63,6 +63,5 @@
   </footer>
 
   <script src="./script.js"></script>
-
 </body>
 </html>
