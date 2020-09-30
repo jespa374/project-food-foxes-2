@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,26 +31,89 @@
     <section class="filters" id="filters">
       <h3>Filters</h3>
 
-      <div class="price-range" name="price-range" id="price-range" onchange="getValue(this)">
-        <p class="filter-by">Price Range:</p>
-          <label for="priceTwo">
-            <input type="radio" id="price-two" name="price-range" value="2">2
-          </label>
+      <div class="price-sort"> 
+            <p>Price (low to high; high to low):</p>
+        <label for="priceOne">
+          Low
+          <input
+            type="checkbox"
+            id="lowtoHigh"
+            name="price-range"
+            onchange="(this)"
+          />
+        </label>
+
+        <label for="priceTwo">
+          High
+          <input
+            type="checkbox"
+            id="highToLow"
+            name="price-range"
+            onchange="sortByHighPrice(this)" 
+            /> 
+       </div> 
+        
+      <div class="price-range">
+        <p>Price Range (1-cheap; 5-expensive):</p>
+
+        <label for="priceOne">
+          <input
+            type="radio"
+            id="priceOne"
+            name="price-range"
+            value="1"
+            onchange="onPriceRangeChange(this)"
+          />1
+        </label>
+
+        <label for="priceTwo">
+          <input
+            type="radio"
+            id="priceTwo"
+            name="price-range"
+            value="2"
+            onchange="onPriceRangeChange(this)"
+          />2
+        </label>
         
         <label for="priceThree">
-          <input type="radio" id="price-three" name="price-range" value="3">3
+          <input
+            type="radio"
+            id="priceThree"
+            name="price-range"
+            value="3"
+            onchange="onPriceRangeChange(this)"
+          />3
         </label>
-        
-        <label for="priceFour">
-          <input type="radio" id="price-four" name="price-range" value="4">4
-        </label>
-    </div>   
-    </section>
 
+        <label for="priceFour">
+          <input
+            type="radio"
+            id="priceFour"
+            name="price-range"
+            value="4"
+            onchange="onPriceRangeChange(this)"
+          />4
+        </label>        
+    </div>   
+
+     <div class="good-reviews">
+        <label for="goodReviews">
+          Good Reviews Only
+          <input
+            type="checkbox"
+            id="goodReviews"
+            name="good-reviews"
+            onchange="onReviewChange(this)"
+          />
+        </label>
+      </div>
+        
+        
     <section class="card-container" id="card-container">
       <!-- JavaScript to inject api data for each restaurant -->
     </section>
-  </section>
+
 
    <!-- Footer -->
    <footer>

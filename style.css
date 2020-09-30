@@ -104,7 +104,6 @@ h3 {
   width: 500px;
   background: #fff;
   display: flex;
-  /* flex-direction: row; */
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -116,7 +115,6 @@ h3 {
   border: 1px solid #809966;
   border-radius: 3px;
   box-shadow: 2px 2px 2px 0 #ccc;
-  
 }
 
 h4 {
@@ -129,7 +127,6 @@ p {
   font-size: 11px;
   margin: 2px 0;
   padding: 0 5px;
-
 }
 
 /* Footer */
