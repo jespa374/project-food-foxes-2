@@ -9,6 +9,30 @@
   <body>
     <section class="filters" id="filters">
       <p>Filter</p>
+
+     <div class="price-sort"> 
+            <p>Price (low to high; high to low):</p>
+        <label for="priceOne">
+          Low
+          <input
+            type="checkbox"
+            id="lowtoHigh"
+            name="price-range"
+            onchange="(this)"
+          />
+        </label>
+
+        <label for="priceTwo">
+          High
+          <input
+            type="checkbox"
+            id="highToLow"
+            name="price-range"
+            onchange="sortByHighPrice(this)" 
+            /> 
+       </div> 
+       </section>
+      
       <div class="filter-price-range">
         <p>Price Range (1-cheap; 5-expensive):</p>
 
@@ -56,6 +80,8 @@
           />
         </label>
       </div>
+        
+
       <div class="good-reviews">
         <label for="goodReviews">
           Good Reviews Only
