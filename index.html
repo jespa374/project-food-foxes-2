@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,30 +31,26 @@
       <h3>Filters</h3>
 
       <div class="price-sort"> 
-            <p>Price (low to high; high to low):</p>
+            <p class="filter-by">Price (low to high; high to low):</p>
         <label for="priceOne">
-          Low
           <input
             type="checkbox"
             id="lowtoHigh"
             name="price-range"
-            onchange="(this)"
-          />
+            onchange="sortFromLow(this)"
+          />Low
         </label>
-
         <label for="priceTwo">
-          High
           <input
             type="checkbox"
             id="highToLow"
             name="price-range"
-            onchange="sortByHighPrice(this)" 
-            /> 
+            onchange="sortFromHigh(this)" 
+            /> High
        </div> 
         
       <div class="price-range">
-        <p>Price Range (1-cheap; 5-expensive):</p>
-
+        <p class="filter-by">Price Range (1-cheap; 5-expensive):</p>
         <label for="priceOne">
           <input
             type="radio"
@@ -65,7 +60,6 @@
             onchange="onPriceRangeChange(this)"
           />1
         </label>
-
         <label for="priceTwo">
           <input
             type="radio"
@@ -75,7 +69,6 @@
             onchange="onPriceRangeChange(this)"
           />2
         </label>
-        
         <label for="priceThree">
           <input
             type="radio"
@@ -85,7 +78,6 @@
             onchange="onPriceRangeChange(this)"
           />3
         </label>
-
         <label for="priceFour">
           <input
             type="radio"
@@ -99,7 +91,7 @@
 
      <div class="good-reviews">
         <label for="goodReviews">
-          Good Reviews Only
+          <p class="filter-by">Good Reviews Only
           <input
             type="checkbox"
             id="goodReviews"
@@ -108,12 +100,12 @@
           />
         </label>
       </div>
-        
+    </section>
         
     <section class="card-container" id="card-container">
       <!-- JavaScript to inject api data for each restaurant -->
     </section>
-
+  </section>
 
    <!-- Footer -->
    <footer>
