@@ -23,8 +23,27 @@
       <label for="priceFour"> 4
         <input type="radio" id="price-four" name="price-range" value="4">
       </label>
-  </div>   
-    
+  </div> 
+  <p>Price (low to high; high to low):</p>
+
+  <label for="priceOne">
+    Low
+    <input
+      type="checkbox"
+      id="lowtoHigh"
+      name="price-range"
+      onchange="(this)"
+    />
+  </label>
+
+  <label for="priceTwo">
+    High
+    <input
+      type="checkbox"
+      id="highToLow"
+      name="price-range"
+      onchange="sortByHighPrice(this)" 
+      /> 
   </section>
 
 
