@@ -64,10 +64,10 @@ const printRestorants = (restaurants) => {
   });
 };
 
-
+//Sort price function doesn't work. fix when you have time. 
 
 //function sort price
-
+/*
 const sortFromLow = (event) => {
   sortToLowest = target.value;
   sortbyLowPrice(filterList());
@@ -95,6 +95,6 @@ const sortbyLowPrice = () => {
         console.log(place.restaurant.price_range);
 
         
-        
+        */
         
      
