@@ -7,4 +7,4 @@ First the different endpoints of the API were tested to fetch different data for
 
 
 ### Link to published website
-
+https://dublinpizza.netlify.app/
